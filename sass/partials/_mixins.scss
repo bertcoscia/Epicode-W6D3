@@ -1,0 +1,4 @@
+@mixin title-big($size: $size-5, $weight: 800) {
+  font-size: $size;
+  font-weight: $weight;
+}

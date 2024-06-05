@@ -1,0 +1,5 @@
+@each $colorLetter, $colorHex in $colorMapHex {
+  .btn-bg-color-#{$colorLetter} {
+    background-color: $colorHex;
+  }
+}

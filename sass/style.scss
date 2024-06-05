@@ -1,0 +1,93 @@
+@import "./partials/reset";
+@import "./partials/variables";
+@import "./partials/spacings";
+@import "./partials/mixins";
+@import "./partials/colors";
+@import "./partials/animations";
+@import "./partials/buttons";
+
+.d-flex {
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+  align-items: center;
+  overflow: hidden;
+}
+
+body {
+  font-family: $sans-serif;
+  color: $text-color;
+}
+
+header {
+  background-color: $bg-color;
+  nav {
+    justify-content: space-between;
+
+    img {
+      width: 50px;
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        padding-inline: 1em;
+
+        .nav-links {
+          text-decoration: none;
+          color: $text-color;
+          &:hover {
+            color: $linkHover-color;
+          }
+          &:visited {
+            color: $text-color;
+            &:hover {
+              color: $linkHover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  opacity: 0;
+  animation: fadeIn 1000ms forwards;
+  section {
+    justify-content: space-around;
+    padding: $size-3;
+    background-color: $bg-color;
+    color: $text-color;
+
+    div {
+      h1 {
+        @include title-big($size-8, 800);
+      }
+
+      p {
+        font-size: $size-3;
+      }
+    }
+
+    img {
+      width: 800px;
+    }
+  }
+}
+
+.grid-container {
+  .grid {
+    justify-content: space-between;
+
+    img {
+      width: 20%;
+    }
+  }
+}
+
+#button-container {
+  button {
+    @extend %button-style;
+  }
+}

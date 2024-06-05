@@ -1,0 +1,21 @@
+$sizeMap: (
+  xs: 10px,
+  sm: 20px,
+  md: 30px,
+  lg: 50px,
+  xl: 100px,
+  xxl: 150px,
+);
+
+$directionList: inline, block;
+
+@each $direction in $directionList {
+  @each $size, $value in $sizeMap {
+    .padding-#{$direction}-#{$size} {
+      padding-#{$direction}: #{$value};
+    }
+    .margin-#{$direction}-#{$size} {
+      margin-#{$direction}: #{$value};
+    }
+  }
+}
