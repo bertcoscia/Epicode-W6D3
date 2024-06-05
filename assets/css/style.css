@@ -129,7 +129,6 @@ body {
 #button-container button {
   font-weight: bold;
   border-radius: 25px;
-  padding: 1rem;
   cursor: pointer;
 }
 
